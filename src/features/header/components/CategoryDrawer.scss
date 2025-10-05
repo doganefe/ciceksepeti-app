@@ -1,0 +1,111 @@
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/mixins.scss";
+
+// Drawer Overlay
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+// Category Drawer
+.category-drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: $white;
+  box-shadow: $shadow-hover;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+
+  &.open {
+    left: 0;
+  }
+}
+
+.drawer-header {
+  @include flex-between;
+  padding: 1rem;
+  border-bottom: 1px solid $border-color;
+  background-color: $primary-color;
+
+  h2 {
+    color: $white;
+    font-size: 1.125rem;
+    font-weight: $font-weight-semibold;
+    margin: 0;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    color: $white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    @include flex-center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.drawer-content {
+  padding: 0.5rem 0;
+}
+
+.category-item {
+  @include flex-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid $border-color;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+
+  &.active {
+    background-color: $primary-color;
+    color: $white;
+
+    .category-count {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .category-name {
+    font-size: 0.9rem;
+    font-weight: $font-weight-medium;
+  }
+
+  .category-count {
+    font-size: 0.8rem;
+    color: $medium-gray;
+  }
+}
+
+// Mobile-first responsive design
+@media (min-width: 768px) {
+  .drawer-overlay {
+    display: none;
+  }
+
+  .category-drawer {
+    display: none;
+  }
+}

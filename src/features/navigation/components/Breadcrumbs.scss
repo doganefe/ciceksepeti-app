@@ -1,0 +1,54 @@
+// Breadcrumbs SCSS Styles
+
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/mixins.scss";
+
+// Breadcrumbs Styles - Mobile First
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  background-color: $light-gray;
+  border-radius: 4px;
+}
+
+.separator {
+  color: $medium-gray;
+  font-weight: 500;
+  margin: 0 0.25rem;
+}
+
+.breadcrumb-link {
+  color: $text-secondary;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb-current {
+  color: $secondary-color;
+  font-weight: 600;
+}
+
+// Tablet and up
+@media (min-width: 768px) {
+  .breadcrumbs {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+// Desktop and up
+@media (min-width: 1024px) {
+  .breadcrumbs {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

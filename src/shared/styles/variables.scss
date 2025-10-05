@@ -1,0 +1,235 @@
+// Global SCSS Variables
+// This file contains all the common variables used across the application
+
+// ===========================================
+// COLOR PALETTE
+// ===========================================
+
+// Primary Colors
+$primary-color: #2c3e50;
+$secondary-color: #4ecdc4;
+$accent-color: #3498db;
+$success-color: #51b549;
+$danger-color: #ff5b4d;
+$warning-color: #f39c12;
+
+// Gray Scale
+$white: #ffffff;
+$light-gray: #f5f5f5;
+$medium-gray: #7f8c8d;
+$dark-gray: #95a5a6;
+$text-secondary: #7f8c8d;
+
+// Background Colors
+$background: #ffffff;
+$background-secondary: #f8f9fa;
+$background-dark: #2c3e50;
+
+// Border Colors
+$border-color: #e0e0e0;
+$border-color-dark: #34495e;
+
+// Brand Colors
+$dark-blue: #044dc3;
+
+// Icon Colors
+$icon-orange: #ff6b35;
+$icon-green: #4ecdc4;
+$icon-light-blue: #45b7d1;
+$icon-dark-blue: #044dc3;
+
+// ===========================================
+// SHADOWS
+// ===========================================
+
+$shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+$shadow-card: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-button: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+// ===========================================
+// BORDER RADIUS
+// ===========================================
+
+$border-radius: 8px;
+$border-radius-small: 4px;
+$border-radius-medium: 12px;
+$border-radius-large: 25px;
+$border-radius-round: 50%;
+
+// ===========================================
+// TRANSITIONS
+// ===========================================
+
+$transition: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+$transition-slow: all 0.5s ease;
+
+// ===========================================
+// SPACING
+// ===========================================
+
+// Padding
+$padding-xs: 0.25rem;
+$padding-sm: 0.5rem;
+$padding-md: 1rem;
+$padding-lg: 1.5rem;
+$padding-xl: 2rem;
+$padding-xxl: 3rem;
+
+// Container Padding (Left-Right)
+$container-padding-mobile: 1rem;
+$container-padding-tablet: 1.5rem;
+$container-padding-desktop: 2rem;
+
+// Margin
+$margin-xs: 0.25rem;
+$margin-sm: 0.5rem;
+$margin-md: 1rem;
+$margin-lg: 1.5rem;
+$margin-xl: 2rem;
+$margin-xxl: 3rem;
+
+// Gap
+$gap-xs: 0.25rem;
+$gap-sm: 0.5rem;
+$gap-md: 1rem;
+$gap-lg: 1.5rem;
+$gap-xl: 2rem;
+
+// ===========================================
+// TYPOGRAPHY
+// ===========================================
+
+// Font Sizes
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-xxl: 1.5rem;
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.4;
+$line-height-relaxed: 1.6;
+
+// ===========================================
+// BREAKPOINTS
+// ===========================================
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1200px;
+
+// ===========================================
+// Z-INDEX
+// ===========================================
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 100;
+$z-index-modal: 1050;
+$z-index-tooltip: 1100;
+
+// ===========================================
+// COMPONENT SPECIFIC
+// ===========================================
+
+// Header
+$header-height: 60px;
+$header-padding: 12px 20px;
+
+// Product Card
+$product-image-height: 200px;
+$product-image-height-mobile: 140px;
+
+// Grid
+$grid-gap: 1.5rem;
+$grid-gap-mobile: 1rem;
+
+// ===========================================
+// MIXINS
+// ===========================================
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin button-style($bg-color, $hover-color) {
+  background-color: $bg-color;
+  color: $white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: $font-weight-semibold;
+  transition: $transition;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin card-style {
+  background: $background;
+  border-radius: $border-radius-medium;
+  box-shadow: $shadow-card;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translateY(-2px);
+  }
+}
+
+@mixin text-ellipsis($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Max Width
+$max-width: 1200px;
+
+@media (max-width: $breakpoint-desktop) {
+  $max-width: 100%;
+}
