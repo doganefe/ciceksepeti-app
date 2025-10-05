@@ -40,7 +40,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   ]);
 
   return (
-    <div className="product-grid">
+    <div className="product-grid container">
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product) => (
           <ProductCard key={product.id} {...product} />

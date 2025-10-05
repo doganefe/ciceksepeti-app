@@ -12,7 +12,7 @@ const MobileAppDownload: React.FC<MobileAppDownloadProps> = ({
 }) => {
   return (
     <div className="mobile-app-download">
-      <div className="download-content">
+      <div className="download-content container">
         <div className="phone-preview">
           <img src={phoneImage} alt="Mobile App Preview" />
         </div>

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
   const copyright = FOOTER_TEXTS.copyright;
   return (
     <footer className="footer">
-      <div className="footer-content">
+      <div className="footer-content container">
         <div className="footer-left">
           <div className="footer-logo">
             <img src={logo} alt="ÇiçekSepeti" />

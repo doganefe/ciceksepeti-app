@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      <header className="header">
+      <header className="header container">
         <button className="hamburger-menu" onClick={handleMenuClick}>
           <img
             src="/src/assets/category-icon.svg"
@@ -41,9 +41,7 @@ const Header: React.FC<HeaderProps> = () => {
       </header>
 
       <div className="h1-bar">
-        <div className="h1-bar-content">
-          <h1 className="h1-title">ÇiçekSepeti H1</h1>
-        </div>
+        <h1 className="h1-title container">ÇiçekSepeti H1</h1>
       </div>
 
       <CategoryDrawer isOpen={isDrawerOpen} onClose={handleDrawerClose} />

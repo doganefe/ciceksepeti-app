@@ -26,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
 
   img {
     width: 100%;
@@ -167,7 +166,6 @@
 
   .product-image {
     height: 180px;
-    padding: 0.75rem;
   }
 
   .product-info {
@@ -186,7 +184,6 @@
 
   .delivery-info {
     font-size: 0.8rem;
-    padding: 0.25rem 0.5rem;
   }
 
   .add-to-cart-btn {
@@ -214,7 +211,6 @@
 @media (max-width: 600px) {
   .product-image {
     height: 160px;
-    padding: 0.5rem;
   }
 
   .product-info {
@@ -233,7 +229,6 @@
 
   .delivery-info {
     font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
   }
 
   .add-to-cart-btn {
@@ -265,7 +260,6 @@
 
   .product-image {
     height: 140px;
-    padding: 0.4rem;
   }
 
   .product-info {
@@ -284,7 +278,6 @@
 
   .delivery-info {
     font-size: 0.7rem;
-    padding: 0.15rem 0.3rem;
   }
 
   .add-to-cart-btn {

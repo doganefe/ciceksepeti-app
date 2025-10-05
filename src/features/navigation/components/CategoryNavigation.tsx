@@ -14,7 +14,7 @@ const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
   };
 
   return (
-    <div className="category-navigation">
+    <div className="category-navigation container">
       <div className="category-header">
         <h2>Kategoriler</h2>
         <div className="all-categories-link">

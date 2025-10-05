@@ -13,7 +13,7 @@ interface BreadcrumbBarProps {
 
 const BreadcrumbBar: React.FC<BreadcrumbBarProps> = ({ items }) => {
   return (
-    <nav className="breadcrumb-bar">
+    <nav className="breadcrumb-bar container">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           {index > 0 && <span className="separator">›</span>}

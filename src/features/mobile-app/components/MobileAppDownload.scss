@@ -7,7 +7,7 @@
 .mobile-app-download {
   background: $background;
   border-radius: $border-radius;
-  padding: 2rem $container-padding-mobile;
+  padding: 2rem 0;
   margin: 2rem 0;
   box-shadow: $shadow;
 }
@@ -117,7 +117,7 @@
 // Responsive Design
 @media (max-width: 767px) {
   .mobile-app-download {
-    padding: 1.5rem $container-padding-tablet;
+    padding: 1.5rem 0;
     margin: 1rem 0;
   }
 
@@ -159,7 +159,7 @@
 
 @media (max-width: 479px) {
   .mobile-app-download {
-    padding: 1rem $container-padding-tablet;
+    padding: 1rem 0;
   }
 
   .download-content {
