@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   price: string;
   image: string;
+  image2x: string;
   hasFreeDelivery?: boolean;
   quantity?: number;
   categoryId: string;

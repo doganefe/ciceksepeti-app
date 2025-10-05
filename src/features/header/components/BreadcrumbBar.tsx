@@ -1,6 +1,5 @@
 import React from "react";
 import "./BreadcrumbBar.scss";
-import png from "../../../assets/bar.png";
 
 interface BreadcrumbItem {
   label: string;

@@ -1,5 +1,12 @@
 // Categories Constants
-export const CATEGORIES = [
+interface Category {
+  id: string;
+  name: string;
+  isActive?: boolean;
+  count?: number;
+}
+
+export const CATEGORIES: readonly Category[] = [
   { id: "1", name: "Tüm Kategoriler", isActive: true },
   { id: "2", name: "Elektronik" },
   { id: "3", name: "Ev ve Yaşam" },
@@ -14,4 +21,4 @@ export const CATEGORIES = [
   { id: "12", name: "Parfüm" },
   { id: "13", name: "Kişisel Bakım" },
   { id: "14", name: "Petshop" },
-] as const;
+];
