@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = () => {
       </header>
 
       <div className="h1-bar">
-        <h1 className="h1-title container">ÇiçekSepeti H1</h1>
+        <p className="h1-title container">ÇiçekSepeti H1</p>
       </div>
 
       <CategoryDrawer isOpen={isDrawerOpen} onClose={handleDrawerClose} />

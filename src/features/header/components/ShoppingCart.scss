@@ -12,8 +12,10 @@
   background-color: $dark-blue;
   color: $white;
   border: none;
+  height: 50px;
+  width: 140px;
+  justify-content: center;
   border-radius: $border-radius-large;
-  padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -21,6 +23,20 @@
   font-weight: 600;
   position: relative;
   transition: $transition;
+
+  // Speech bubble pointer
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid $danger-color;
+  }
 }
 
 .cart-text {
