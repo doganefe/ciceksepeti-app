@@ -10,6 +10,7 @@ import {
   PRODUCTS,
   MOBILE_APP_CONFIG,
 } from "./shared/constants";
+import Campaign from "./features/products/components/Campaign";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
         <CategoryNavigation categories={[...CATEGORIES]} />
 
         <ProductGrid products={[...PRODUCTS]} />
+
+        <hr className="main-hr" />
+
+        <Campaign />
       </main>
 
       <MobileAppDownload {...MOBILE_APP_CONFIG} />

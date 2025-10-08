@@ -12,21 +12,13 @@
   min-height: 100vh;
 }
 
+.main-hr {
+  margin: 30px 0;
+  border: 1px solid #edf1f2;
+}
+
 .container {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0 auto;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 767px) {
-  .app {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width: 479px) {
-  .app {
-    padding: 0;
-  }
+  padding: 0 0.5rem;
 }

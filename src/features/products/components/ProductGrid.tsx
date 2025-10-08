@@ -40,16 +40,22 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   ]);
 
   return (
-    <div className="product-grid container">
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <ProductCard key={product.id} {...product} />
-        ))
-      ) : (
-        <div className="no-results">
-          <p>Aradığınız kriterlere uygun ürün bulunamadı.</p>
-        </div>
-      )}
+    <div className="container product-grid-container">
+      <h3 className="product-grid-title">
+        <img src="/src/assets/yaprak.png" alt="Leaf" className="leaf-icon" />
+        Tüm Kategoriler
+      </h3>
+      <div className="product-grid">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.id} {...product} />
+          ))
+        ) : (
+          <div className="no-results">
+            <p>Aradığınız kriterlere uygun ürün bulunamadı.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

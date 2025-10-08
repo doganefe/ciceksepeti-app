@@ -5,35 +5,26 @@
 
 // Mobile App Download Styles
 .mobile-app-download {
-  background: $background;
   border-radius: $border-radius;
   padding: 2rem 0;
   margin: 2rem 0;
   box-shadow: $shadow;
+  background-color: #f2f2f2;
 }
 
 .download-content {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  background-color: $white;
+  border-radius: 9999px;
 }
 
 .phone-preview {
-  flex: 1;
-  max-width: 200px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  }
 }
 
 .download-info {
-  flex: 1;
   text-align: center;
 
   h2 {

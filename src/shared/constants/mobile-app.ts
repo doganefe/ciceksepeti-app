@@ -3,7 +3,7 @@ export const MOBILE_APP_CONFIG = {
   title: "Çiçek Sepeti Mobil Uygulamayı İndirin",
   subtitle: "Mobil Uygulamayı QR Kod ile İndirin.",
   qrCodeImage: "/src/assets/qr.png",
-  phoneImage: "/src/assets/Iphone.png",
+  phoneImage: "/src/assets/doublePhone.png",
   googlePlayLink: "#",
   appStoreLink: "#",
 } as const;

@@ -47,13 +47,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="product-actions">
           {cartQuantity > 0 ? (
             <div className="quantity-selector">
-              <button onClick={() => handleQuantityChange(cartQuantity - 1)}>
-                -
-              </button>
+              <img
+                src="/src/assets/minus-icon.png"
+                alt="minus"
+                onClick={() => handleQuantityChange(cartQuantity - 1)}
+              />
               <span>{cartQuantity}</span>
-              <button onClick={() => handleQuantityChange(cartQuantity + 1)}>
-                +
-              </button>
+              <img
+                src="/src/assets/plus-icon.svg"
+                alt="plus"
+                onClick={() => handleQuantityChange(cartQuantity + 1)}
+              />
             </div>
           ) : (
             <button className="add-to-cart-btn" onClick={handleAddToCart}>
