@@ -1,6 +1,7 @@
 import React from "react";
 import "./FreeCargoProgressBar.scss";
 import { useCartStore } from "../../../shared/store";
+import { simsekIcon } from "../../../assets";
 
 const FreeCargoProgressBar: React.FC = () => {
   const { items, totalItems } = useCartStore();
@@ -29,7 +30,7 @@ const FreeCargoProgressBar: React.FC = () => {
     >
       <div className="progress-content">
         <div className="progress-icon">
-          <img src="/src/assets/simsek.svg" alt="Lightning" />
+          <img src={simsekIcon} alt="Lightning" />
         </div>
 
         <div className="progress-text">

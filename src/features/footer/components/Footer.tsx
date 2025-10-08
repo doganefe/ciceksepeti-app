@@ -6,6 +6,7 @@ import {
   FOOTER_TEXTS,
   HEADER_CONFIG,
 } from "../../../shared/constants";
+import { fbIcon, xIcon, instagramIcon, youtubeIcon } from "../../../assets";
 
 const Footer: React.FC = () => {
   const logo = HEADER_CONFIG.logoImage;
@@ -26,22 +27,22 @@ const Footer: React.FC = () => {
           <div className="social-media">
             {socialMedia.facebook && (
               <a href={socialMedia.facebook} className="social-link">
-                <img src="/src/assets/fb-icon.svg" alt="Facebook" />
+                <img src={fbIcon} alt="Facebook" />
               </a>
             )}
             {socialMedia.twitter && (
               <a href={socialMedia.twitter} className="social-link">
-                <img src="/src/assets/x-icon.svg" alt="Twitter" />
+                <img src={xIcon} alt="Twitter" />
               </a>
             )}
             {socialMedia.instagram && (
               <a href={socialMedia.instagram} className="social-link">
-                <img src="/src/assets/instagram.svg" alt="Instagram" />
+                <img src={instagramIcon} alt="Instagram" />
               </a>
             )}
             {socialMedia.youtube && (
               <a href={socialMedia.youtube} className="social-link">
-                <img src="/src/assets/youtube-icon.svg" alt="YouTube" />
+                <img src={youtubeIcon} alt="YouTube" />
               </a>
             )}
           </div>

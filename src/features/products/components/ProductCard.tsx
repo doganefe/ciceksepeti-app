@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.scss";
 import { useCartStore } from "../../../shared/store";
 import type { ProductCardProps } from "../types/product-card.types";
+import { minusIcon, plusIcon } from "../../../assets";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   id,
@@ -48,13 +49,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
           {cartQuantity > 0 ? (
             <div className="quantity-selector">
               <img
-                src="/src/assets/minus-icon.png"
+                src={minusIcon}
                 alt="minus"
                 onClick={() => handleQuantityChange(cartQuantity - 1)}
               />
               <span>{cartQuantity}</span>
               <img
-                src="/src/assets/plus-icon.svg"
+                src={plusIcon}
                 alt="plus"
                 onClick={() => handleQuantityChange(cartQuantity + 1)}
               />

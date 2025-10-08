@@ -1,6 +1,7 @@
 import React from "react";
 import "./SearchBar.scss";
 import { useSearchStore } from "../../../shared/store";
+import { searchIcon } from "../../../assets";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -21,11 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ placeholder = "Ürün Ara" }) => 
 
   return (
     <form className="search-bar" onSubmit={handleSearch}>
-      <img
-        src="/src/assets/search-icon.svg"
-        alt="Search"
-        className="search-icon"
-      />
+      <img src={searchIcon} alt="Search" className="search-icon" />
       <input
         type="text"
         name="search"

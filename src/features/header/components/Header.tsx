@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import ShoppingCart from "./ShoppingCart";
 import CategoryDrawer from "./CategoryDrawer";
 import type { HeaderProps } from "../types/header.types";
+import { categoryIcon, ciceksepetiIcon } from "../../../assets";
 
 const Header: React.FC<HeaderProps> = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -20,15 +21,11 @@ const Header: React.FC<HeaderProps> = () => {
     <>
       <header className="header container">
         <button className="hamburger-menu" onClick={handleMenuClick}>
-          <img
-            src="/src/assets/category-icon.svg"
-            alt="Menu"
-            className="menu-icon"
-          />
+          <img src={categoryIcon} alt="Menu" className="menu-icon" />
         </button>
 
         <div className="header-logo">
-          <img src="/src/assets/ciceksepeti-ikon.svg" alt="ÇiçekSepeti Logo" />
+          <img src={ciceksepetiIcon} alt="ÇiçekSepeti Logo" />
         </div>
 
         <div className="header-searchbar">

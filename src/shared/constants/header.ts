@@ -1,5 +1,7 @@
+import { group148 } from "../../assets";
+
 // Header Constants
 export const HEADER_CONFIG = {
   cartCount: 2,
-  logoImage: "/src/assets/Group 148.svg",
+  logoImage: group148,
 } as const;

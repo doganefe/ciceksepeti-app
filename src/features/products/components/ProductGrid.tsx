@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard";
 import "./ProductGrid.scss";
 import { useSearchStore } from "../../../shared/store";
 import type { ProductGridProps } from "../types/product-grid.types";
+import { yaprakIcon } from "../../../assets";
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   const {
@@ -42,7 +43,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   return (
     <div className="container product-grid-container">
       <h3 className="product-grid-title">
-        <img src="/src/assets/yaprak.png" alt="Leaf" className="leaf-icon" />
+        <img src={yaprakIcon} alt="Leaf" className="leaf-icon" />
         Tüm Kategoriler
       </h3>
       <div className="product-grid">

@@ -1,20 +1,21 @@
 import "./Campaign.scss";
+import { campaign1, campaign2, campaign3 } from "../../../assets";
 
 const CAMPAIGN_LIST = [
   {
-    image: "/src/assets/campaign1.png",
+    image: campaign1,
     title: "75 TL Üzerine Teslimat Ücreti Bizden",
     description: "Detaylı Bilgi",
     bgColor: "#FFEAE8",
   },
   {
-    image: "/src/assets/campaign2.png",
+    image: campaign2,
     title: "Hediye Kategorisi için Sepette %15 İndirim",
     description: "Hediye Ürünleri",
     bgColor: "#E8F1FF",
   },
   {
-    image: "/src/assets/campaign3.png",
+    image: campaign3,
     title: "Kırtasiye Kategorisi için Sepette %15 İndirim",
     description: "Detaylı Bilgi",
     bgColor: "#E2F7E1",
