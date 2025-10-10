@@ -21,11 +21,8 @@ function App() {
 
       <main>
         <CategoryNavigation categories={[...CATEGORIES]} />
-
-        <ProductGrid products={[...PRODUCTS]} />
-
+        {/* <ProductGrid products={[...PRODUCTS]} /> */}
         <hr className="main-hr" />
-
         <Campaign />
       </main>
 
