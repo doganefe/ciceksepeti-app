@@ -49,6 +49,7 @@ export const FOOTER_SOCIAL_MEDIA = {
   twitter: "#",
   instagram: "#",
   youtube: "#",
+  orange: "#",
 } as const;
 
 export const FOOTER_TEXTS = {
@@ -56,6 +57,5 @@ export const FOOTER_TEXTS = {
     "CicekSepeti.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6608 sayılı Kişisel verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine",
   privacyLink: "#",
   description:
-    "Çiçek Sepeti, Türkiye'nin en büyük online çiçek ve hediye sitesidir. Hızlı teslimat, geniş ürün yelpazesi ve kolay sipariş imkanı ile sevdiklerinize özel günlerde en güzel hediyeleri gönderebilirsiniz. Doğum günü, yıldönümü, Sevgililer Günü, Kadınlar Günü, Anneler Günü gibi özel günlerde çiçek ve hediye seçeneklerimizle mutluluk dağıtıyoruz.",
-  copyright: "Copyright © 2019 Çiçek Sepeti Internet Hizmetleri A.Ş.",
+    "Türkiyenin en büyük online çiçek sitesi ÇiçekSepeti ile sevdiklerinizi mutlu etmek çok kolay! Çiçek göndermenin ve “Mutlu etmenin adresi” Çiçek Sepeti ile sevdiklerinize özel günlerde online çiçek gönderebilirsiniz. Geniş çiçekçi ağı sayesinde çiçek siparişleriniz Türkiye’nin dört bir yanına hızlı ve sorunsuz şekilde gönderilir. Taze çiçeklerle hazırlanan mis kokulu şık çiçek aranjmanları arasından beğendiğiniz ürünü seçerek, hızlı bir şekilde online sipariş verebilirsiniz. Sevdiklerinizin doğum günü, yıldönümü gibi mutlu günlerinde onların sevincine ortak olmak için yapmanız gereken sadece birkaç tıkla sipariş vermek. Sevgililer Günü, Kadınlar Günü, Anneler Günü gibi özel günlerde de çiçek, hediye ve lezzetli bonnyFood ürünleriyle sevdiklerinizi mutlu edebilirsiniz. Çünkü mutlu etmenin adresi; ÇiçekSepeti.",
 } as const;

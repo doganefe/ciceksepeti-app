@@ -6,7 +6,13 @@ import {
   FOOTER_TEXTS,
   HEADER_CONFIG,
 } from "../../../shared/constants";
-import { fbIcon, xIcon, instagramIcon, youtubeIcon } from "../../../assets";
+import {
+  fbIcon,
+  xIcon,
+  instagramIcon,
+  youtubeIcon,
+  group148,
+} from "../../../assets";
 
 const Footer: React.FC = () => {
   const logo = HEADER_CONFIG.logoImage;
@@ -43,6 +49,12 @@ const Footer: React.FC = () => {
             {socialMedia.youtube && (
               <a href={socialMedia.youtube} className="social-link">
                 <img src={youtubeIcon} alt="YouTube" />
+              </a>
+            )}
+
+            {socialMedia.orange && (
+              <a href={socialMedia.orange} className="social-link">
+                <img src={group148} alt="Orange" />
               </a>
             )}
           </div>

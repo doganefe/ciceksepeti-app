@@ -16,12 +16,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-
       <BreadcrumbBar items={[...BREADCRUMB_ITEMS]} />
 
       <main>
         <CategoryNavigation categories={[...CATEGORIES]} />
-        {/* <ProductGrid products={[...PRODUCTS]} /> */}
+        <ProductGrid products={[...PRODUCTS]} />
         <hr className="main-hr" />
         <Campaign />
       </main>
