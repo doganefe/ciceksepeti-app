@@ -96,7 +96,8 @@
 }
 
 // Responsive Design
-@media (max-width: 767px) {
+@media (max-width: ($breakpoint-tablet - 1)) {
+  // Below tablet
   .product-card {
     border-radius: $border-radius;
   }
@@ -122,6 +123,7 @@
 }
 
 @media (max-width: 576px) {
+  // Small devices
   .product-name {
     font-size: 0.85rem;
     line-height: 1.2;
@@ -142,7 +144,8 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: ($breakpoint-mobile - 1)) {
+  // Below mobile
   .product-card {
     border-radius: $border-radius-small;
   }

@@ -125,7 +125,8 @@
 }
 
 // Responsive Design
-@media (max-width: 767px) {
+@media (max-width: ($breakpoint-tablet - 1)) {
+  // Below tablet
   .mobile-app-download {
     padding: 1.5rem 0;
   }
@@ -165,7 +166,8 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: ($breakpoint-mobile - 1)) {
+  // Below mobile
   .mobile-app-download {
     padding: 1rem 0;
   }

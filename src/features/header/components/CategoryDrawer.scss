@@ -100,7 +100,7 @@
 }
 
 // Mobile-first responsive design
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .drawer-overlay {
     display: none;
   }

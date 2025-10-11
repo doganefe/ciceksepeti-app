@@ -15,6 +15,7 @@
 }
 
 @media (min-width: 576px) {
+  // Small tablet breakpoint
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -31,7 +32,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-desktop) {
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   }

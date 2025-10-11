@@ -35,14 +35,14 @@
 }
 
 // Tablet and up
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .breadcrumb-bar {
     font-size: 0.8rem;
   }
 }
 
 // Desktop and up
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-desktop) {
   .breadcrumb-bar {
     font-size: 0.85rem;
   }

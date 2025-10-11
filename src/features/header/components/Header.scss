@@ -20,7 +20,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 0.533rem 0; // 8px
   @include flex-center;
 
   .menu-icon {
@@ -63,7 +63,7 @@
   font-size: $font-size-xl;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .hamburger-menu {
     display: none;
   }
@@ -73,13 +73,13 @@
   }
 
   .h1-title {
-    font-size: clamp($font-size-xxl, 4vw, 1.75rem);
+    font-size: clamp($font-size-xxl, 4vw, 1.867rem); // 24px - 28px
   }
 
   .header-logo {
     flex: 0 0 auto;
     justify-content: flex-start;
-    margin-right: 1rem;
+    margin-right: 1.067rem; // 16px
     img {
       width: 140px;
     }
@@ -89,7 +89,7 @@
     display: block;
     flex: 1;
     max-width: 500px;
-    margin: 0 1rem;
+    margin: 0 1.067rem; // 16px
   }
 
   .header-shopping-cart {
@@ -97,9 +97,9 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-desktop) {
   .header-searchbar {
     max-width: 600px;
-    margin: 0 2rem;
+    margin: 0 2.133rem; // 32px
   }
 }

@@ -16,7 +16,7 @@
   height: 50px;
   width: 50px;
   justify-content: center;
-  border-radius: 1rem;
+  border-radius: 1.067rem; // 16px
   display: flex;
   align-items: center;
   gap: 6px;
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6875rem; // 11px
+  font-size: 0.733rem; // 11px
   font-weight: 700;
   border: 2px solid $white;
 }
@@ -57,7 +57,7 @@
   display: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   // Shopping Cart Container
   .shopping-cart-container {
     position: relative;

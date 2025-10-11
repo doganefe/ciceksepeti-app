@@ -146,7 +146,7 @@
 }
 
 // Responsive Design
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-desktop) {
   .footer-content {
     flex-direction: column;
   }
@@ -160,7 +160,8 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: ($breakpoint-tablet - 1)) {
+  // Below tablet
   .footer-content {
     gap: 2rem;
     padding-top: 1.5rem;
@@ -194,7 +195,8 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: ($breakpoint-mobile - 1)) {
+  // Below mobile
   .footer-sections {
     flex-direction: column;
     gap: 1.5rem;

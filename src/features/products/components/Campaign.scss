@@ -50,7 +50,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
   .campaign-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -69,15 +69,21 @@
     align-items: flex-start;
     flex: 2;
     padding: 1rem;
-    h3 {
-      font-size: 24px;
-      padding-left: 0;
+
+    button {
+      height: 2.5rem;
     }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-desktop) {
   .campaign-list {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .campaign-content {
+    h3 {
+      font-size: 1.5rem;
+    }
   }
 }
