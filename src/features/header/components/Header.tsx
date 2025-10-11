@@ -19,29 +19,37 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      <header className="header container">
-        <button className="hamburger-menu" onClick={handleMenuClick}>
-          <img src={categoryIcon} alt="Menu" className="menu-icon" />
-        </button>
+      <div className="sticky-container">
+        <header className="container sticky">
+          <div className="header">
+            <button
+              className="hamburger-menu"
+              onClick={handleMenuClick}
+              aria-label="Menu"
+            >
+              <img src={categoryIcon} alt="Menu" className="menu-icon" />
+            </button>
 
-        <div className="header-logo">
-          <img src={ciceksepetiIcon} alt="ÇiçekSepeti Logo" />
-        </div>
+            <div className="header-logo">
+              <img src={ciceksepetiIcon} alt="ÇiçekSepeti Logo" />
+            </div>
 
-        <div className="header-searchbar">
-          <SearchBar />
-        </div>
+            <div className="header-searchbar">
+              <SearchBar />
+            </div>
 
-        <div className="header-shopping-cart">
-          <ShoppingCart />
-        </div>
-      </header>
+            <div className="header-shopping-cart">
+              <ShoppingCart />
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <CategoryDrawer isOpen={isDrawerOpen} onClose={handleDrawerClose} />
 
       <div className="h1-bar">
         <p className="h1-title container">ÇiçekSepeti H1</p>
       </div>
-
-      <CategoryDrawer isOpen={isDrawerOpen} onClose={handleDrawerClose} />
     </>
   );
 };

@@ -4,7 +4,7 @@
 .category-button {
   border: 1px solid #e2e7e9;
   border-radius: $border-radius;
-  font-size: 0.875rem;
+  font-size: $font-size-sm; // 0.875rem = 14px
   width: 195px;
   font-weight: 500;
   height: 50px;

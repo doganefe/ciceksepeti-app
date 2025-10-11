@@ -121,11 +121,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .product-image {
-    height: 160px;
-  }
-
+@media (max-width: 576px) {
   .product-name {
     font-size: 0.85rem;
     line-height: 1.2;

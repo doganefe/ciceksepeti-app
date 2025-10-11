@@ -28,7 +28,7 @@
 
 .cart-text {
   display: none;
-  font-size: 14px;
+  font-size: $font-size-sm; // 0.875rem = 14px
 }
 .cart-icon {
   width: 22px;
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 0.6875rem; // 11px
   font-weight: 700;
   border: 2px solid $white;
 }
@@ -70,7 +70,7 @@
 
   .cart-text {
     display: none;
-    font-size: 14px;
+    font-size: $font-size-sm; // 0.875rem = 14px
   }
 
   .cart-icon {

@@ -5,7 +5,7 @@
 
 // Category Navigation Styles - Mobile First
 .category-navigation {
-  display: none; // Hidden on mobile, shown in drawer
+  display: none; // Hide on mobile
   margin-bottom: 30px;
 }
 
@@ -17,7 +17,7 @@
 
   h2 {
     color: $dark-blue;
-    font-size: 1.25rem;
+    font-size: $font-size-xl; // 1.25rem = 20px
     font-weight: 500;
     margin: 0;
   }
@@ -28,7 +28,7 @@
   align-items: center;
   gap: 0.5rem;
   color: $secondary-color;
-  font-size: 0.875rem;
+  font-size: $font-size-sm; // 0.875rem = 14px
   font-weight: 600;
   cursor: pointer;
   transition: $transition;
@@ -59,7 +59,6 @@
     color: rgba(255, 255, 255, 0.8);
   }
 }
-
 // Tablet and up - Show category navigation
 @media (min-width: 768px) {
   .category-navigation {
