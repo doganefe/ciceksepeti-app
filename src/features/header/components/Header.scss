@@ -68,6 +68,10 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
+  .sticky-container {
+    position: static;
+  }
+
   .hamburger-menu {
     display: none;
   }

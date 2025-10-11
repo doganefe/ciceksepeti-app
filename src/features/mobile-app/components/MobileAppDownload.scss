@@ -125,13 +125,14 @@
 }
 
 // Responsive Design
-@media (max-width: ($breakpoint-tablet - 1)) {
+@media (max-width: $breakpoint-desktop) {
   // Below tablet
   .mobile-app-download {
     padding: 1.5rem 0;
   }
 
   .download-content {
+    height: auto;
     flex-direction: column;
     gap: 1.5rem;
     background-color: $background-light;
@@ -149,11 +150,6 @@
     p {
       font-size: 0.875rem;
     }
-  }
-
-  .qr-code img {
-    width: 100px;
-    height: 100px;
   }
 
   .download-buttons {
@@ -191,10 +187,10 @@
     align-items: center;
   }
 
-  .qr-code img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0;
+  .qr-code {
+    img {
+      margin-bottom: 0;
+    }
   }
 
   .download-buttons {
