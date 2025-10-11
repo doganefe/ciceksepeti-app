@@ -23,7 +23,12 @@
   }
 }
 
-.all-categories-link {
+.category-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.category-header-right {
   display: flex;
   align-items: center;
   gap: 0.533rem; // 8px

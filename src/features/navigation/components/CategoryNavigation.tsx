@@ -3,7 +3,7 @@ import "./CategoryNavigation.scss";
 import { useSearchStore } from "../../../shared/store";
 import CategoryButton from "./CategoryButton";
 import type { CategoryNavigationProps } from "../types/category-navigation.types";
-import { yaprakIcon } from "../../../assets";
+import { yaprakIcon, categoryIcon } from "../../../assets";
 
 const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
   categories,
@@ -17,10 +17,9 @@ const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
   return (
     <div className="category-navigation container">
       <div className="category-header">
-        <h2>Kategoriler</h2>
-        <div className="all-categories-link">
-          <img src={yaprakIcon} alt="Leaf" className="leaf-icon" />
-          <span>Tüm Kategoriler</span>
+        <div className="category-header-left">
+          <img src={categoryIcon} alt="Leaf" className="leaf-icon" />
+          <h2>Kategoriler</h2>
         </div>
       </div>
 

@@ -43,7 +43,7 @@
     background-color: $white;
     color: #e64e41;
     border: none;
-    border-radius: $border-radius-medium;
+    border-radius: $border-radius-full;
     height: 30px;
     padding: 0 1rem;
     cursor: pointer;
@@ -75,12 +75,13 @@
     }
   }
 }
-
 @media (min-width: $breakpoint-desktop) {
   .campaign-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
 
+@media (min-width: $breakpoint-xlarge) {
   .campaign-content {
     h3 {
       font-size: 1.5rem;

@@ -30,16 +30,20 @@ const Header: React.FC<HeaderProps> = () => {
               <img src={categoryIcon} alt="Menu" className="menu-icon" />
             </button>
 
-            <div className="header-logo">
-              <img src={ciceksepetiIcon} alt="ÇiçekSepeti Logo" />
+            <div className="header-left">
+              <div className="header-logo">
+                <img src={ciceksepetiIcon} alt="ÇiçekSepeti Logo" />
+              </div>
+
+              <div className="header-searchbar">
+                <SearchBar />
+              </div>
             </div>
 
-            <div className="header-searchbar">
-              <SearchBar />
-            </div>
-
-            <div className="header-shopping-cart">
-              <ShoppingCart />
+            <div className="header-right">
+              <div className="header-shopping-cart">
+                <ShoppingCart />
+              </div>
             </div>
           </div>
         </header>

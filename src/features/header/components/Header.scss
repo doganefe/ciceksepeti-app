@@ -9,6 +9,10 @@
   position: relative;
 }
 
+.header-left {
+  display: flex;
+}
+
 .sticky-container {
   background-color: $white;
   position: sticky;
@@ -68,6 +72,10 @@
     display: none;
   }
 
+  .header-left {
+    flex: 1;
+  }
+
   .h1-bar {
     height: 74px;
   }
@@ -79,7 +87,6 @@
   .header-logo {
     flex: 0 0 auto;
     justify-content: flex-start;
-    margin-right: 1.067rem; // 16px
     img {
       width: 140px;
     }
@@ -88,7 +95,6 @@
   .header-searchbar {
     display: block;
     flex: 1;
-    max-width: 500px;
     margin: 0 1.067rem; // 16px
   }
 
@@ -99,7 +105,12 @@
 
 @media (min-width: $breakpoint-desktop) {
   .header-searchbar {
-    max-width: 600px;
-    margin: 0 2.133rem; // 32px
+    margin: 0 2.133rem;
+  }
+}
+
+@media (min-width: $breakpoint-xlarge) {
+  .header-left {
+    gap: 2rem;
   }
 }

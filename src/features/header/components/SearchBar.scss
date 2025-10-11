@@ -13,12 +13,12 @@
   padding: 5px;
   width: 100%;
   margin: 20px 0;
-  max-width: 600px;
   transition: $transition;
   height: 50px;
+  max-width: 500px;
 
   &:focus-within {
-    border-color: $icon-green;
+    border-color: $success-color;
   }
 }
 
@@ -57,5 +57,17 @@
 
   &:hover {
     background-color: #229954;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .search-bar {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: $breakpoint-xxlarge) {
+  .search-bar {
+    max-width: 872px;
   }
 }
