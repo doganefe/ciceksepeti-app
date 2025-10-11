@@ -9,7 +9,7 @@
   padding-top: 11rem;
   padding-bottom: 3rem;
   margin-top: 2rem;
-  background-color: #f2f2f2;
+  background-color: $background-light;
 }
 
 .download-content {
@@ -108,18 +108,18 @@
   }
 
   &.google-play {
-    background: #000000;
+    background: $black;
 
     &:hover {
-      background: #333333;
+      background: $text-secondary;
     }
   }
 
   &.app-store {
-    background: #000000;
+    background: $black;
 
     &:hover {
-      background: #333333;
+      background: $text-secondary;
     }
   }
 }
@@ -134,7 +134,7 @@
   .download-content {
     flex-direction: column;
     gap: 1.5rem;
-    background-color: #f2f2f2;
+    background-color: $background-light;
 
     .download-content-child:first-child .phone-image {
       display: none;
@@ -174,7 +174,7 @@
 
   .download-content {
     gap: 1rem;
-    background-color: #f2f2f2;
+    background-color: $background-light;
   }
 
   .download-info {

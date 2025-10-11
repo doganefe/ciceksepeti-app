@@ -5,8 +5,8 @@
 
 // Footer Styles
 .footer {
-  background: #f2f2f2;
-  color: #333;
+  background: $background-light;
+  color: $text-secondary;
   margin-top: auto;
 }
 
@@ -20,7 +20,7 @@
 
 .footer-left {
   flex: 1;
-  border-right: 1px dashed #9b9b9b;
+  border-right: 1px dashed $border-color-gray;
   padding-right: 2rem;
 
   .footer-logo {
@@ -65,13 +65,13 @@
   .privacy-text {
     p {
       margin: 0;
-      color: #000000;
+      color: $text-primary;
 
       a {
         text-decoration: underline;
 
         &:hover {
-          color: #333;
+          color: $text-secondary;
         }
       }
     }
@@ -105,13 +105,13 @@
       margin-bottom: 0.5rem;
 
       a {
-        color: #000000;
+        color: $text-primary;
         text-decoration: none;
         font-size: 15px;
         transition: $transition;
 
         &:hover {
-          color: #333;
+          color: $text-secondary;
           text-decoration: underline;
         }
       }
@@ -120,12 +120,12 @@
 }
 
 .footer-description {
-  background: #f2f2f2;
+  background: $background-light;
   padding: 1.5rem $container-padding-desktop;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid $border-color;
 
   p {
-    color: #000000;
+    color: $text-primary;
     line-height: 1.6;
     margin: 0 auto;
     font-size: 15px;
@@ -136,9 +136,9 @@
 
 .footer-copyright {
   text-align: center;
-  background: #e6e6e6;
+  background: $background-gray;
   p {
-    color: #000000;
+    color: $text-primary;
     margin: 0;
     font-size: 0.75rem;
     padding: 0.9rem;
@@ -150,6 +150,16 @@
   .footer-left {
     border-right: none;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .privacy-text {
+      p {
+        text-align: center;
+      }
+    }
   }
   .footer-content {
     flex-direction: column;

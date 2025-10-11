@@ -8,7 +8,7 @@
   position: relative;
   border-radius: $border-radius-medium;
   padding: 1rem;
-  border: 1px solid #e2e7e9;
+  border: 1px solid $border-color-light;
   display: flex;
   flex-direction: column;
   * {
@@ -34,7 +34,7 @@
 
 .product-name {
   font-size: 1rem;
-  color: #555555;
+  color: $text-gray;
   margin: 0;
   overflow: hidden;
   line-height: 1.5;
@@ -44,7 +44,7 @@
 
 .product-price {
   font-size: 1.25rem;
-  color: #000000;
+  color: $text-primary;
 }
 
 .delivery-info {
@@ -74,7 +74,7 @@
 }
 
 .quantity-selector {
-  color: #555555;
+  color: $text-gray;
   display: flex;
   align-items: center;
   border-radius: $border-radius-large;
@@ -85,7 +85,7 @@
 
   span {
     font-weight: 700;
-    color: #555555;
+    color: $text-gray;
     min-width: 32px;
     text-align: center;
     font-size: 22px;

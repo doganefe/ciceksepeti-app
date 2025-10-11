@@ -2,20 +2,20 @@
 @import "../../../shared/styles/mixins.scss";
 
 .category-button {
-  border: 1px solid #e2e7e9;
+  border: 1px solid $border-color-light;
   border-radius: $border-radius;
   font-size: $font-size-sm; // 0.875rem = 14px
   width: 195px;
   font-weight: 600;
   height: 50px;
-  color: #707070;
+  color: $text-medium;
   cursor: pointer;
   transition: $transition;
   white-space: nowrap;
   background: $background;
 
   &.active {
-    background: #044dc3;
+    background: $dark-blue;
     color: white;
   }
 }

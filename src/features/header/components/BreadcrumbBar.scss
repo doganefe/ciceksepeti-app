@@ -13,12 +13,12 @@
 }
 
 .separator {
-  color: #555555;
+  color: $text-gray;
   font-weight: 500;
 }
 
 .breadcrumb-link {
-  color: #555555;
+  color: $text-gray;
   text-decoration: none;
   transition: $transition;
   font-weight: $font-weight-normal;
@@ -30,7 +30,7 @@
 }
 
 .breadcrumb-current {
-  color: #51b549;
+  color: $success-color;
   font-weight: $font-weight-medium;
 }
 
