@@ -49,6 +49,10 @@ const Header: React.FC<HeaderProps> = () => {
         </header>
       </div>
 
+      <div className="mobile-searchbar-container container">
+        <SearchBar />
+      </div>
+
       <CategoryDrawer isOpen={isDrawerOpen} onClose={handleDrawerClose} />
 
       <div className="h1-bar">

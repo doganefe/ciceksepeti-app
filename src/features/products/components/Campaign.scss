@@ -63,6 +63,9 @@
 
   .campaign-image {
     flex: 1;
+    img {
+      max-width: 130px;
+    }
   }
 
   .campaign-content {
@@ -79,12 +82,24 @@
   .campaign-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .campaign-image {
+    img {
+      max-width: 140px;
+    }
+  }
 }
 
 @media (min-width: $breakpoint-xlarge) {
   .campaign-content {
     h3 {
       font-size: 1.5rem;
+    }
+  }
+
+  .campaign-image {
+    img {
+      max-width: unset;
     }
   }
 }
