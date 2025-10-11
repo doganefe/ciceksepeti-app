@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
-import SearchBar from "./SearchBar";
-import ShoppingCart from "./ShoppingCart";
+import { SearchBar } from "../../search";
+import { ShoppingCart } from "../../cart";
 import CategoryDrawer from "./CategoryDrawer";
 import type { HeaderProps } from "../types/header.types";
 import { categoryIcon, ciceksepetiIcon } from "../../../assets";

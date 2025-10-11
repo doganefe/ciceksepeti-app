@@ -3,10 +3,7 @@ import "./ShoppingCart.scss";
 import { useCartStore } from "../../../shared/store";
 import FreeCargoProgressBar from "./FreeCargoProgressBar";
 import { shoppingCartIcon } from "../../../assets";
-
-interface ShoppingCartProps {
-  onCartClick?: () => void;
-}
+import type { ShoppingCartProps } from "../types/shopping-cart.types";
 
 const ShoppingCart: React.FC<ShoppingCartProps> = () => {
   const { totalItems } = useCartStore();

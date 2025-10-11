@@ -2,11 +2,7 @@ import React from "react";
 import "./SearchBar.scss";
 import { useSearchStore } from "../../../shared/store";
 import { searchIcon } from "../../../assets";
-
-interface SearchBarProps {
-  placeholder?: string;
-  onSearch?: (query: string) => void;
-}
+import type { SearchBarProps } from "../types/search-bar.types";
 
 const SearchBar: React.FC<SearchBarProps> = ({ placeholder = "Ürün Ara" }) => {
   const { setSearchTerm, searchTerm } = useSearchStore();
