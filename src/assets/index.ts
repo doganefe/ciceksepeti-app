@@ -27,6 +27,7 @@ export { default as campaign3 } from "./campaign3.png";
 
 // Mobile App Images
 export { default as qrCode } from "./qr.png";
+export { default as qrCode_2x } from "./qr@2x.png";
 export { default as doublePhone } from "./doublePhone.png";
 
 // Icons
@@ -38,6 +39,7 @@ export { default as searchIcon } from "./search-icon.svg";
 export { default as shoppingCartIcon } from "./shopping-cart.svg";
 export { default as simsekIcon } from "./simsek.svg";
 export { default as yaprakIcon } from "./yaprak.png";
+export { default as yaprakIcon_2x } from "./yaprak@2x.png";
 export { default as group148 } from "./Group 148.svg";
 
 // Social Media Icons

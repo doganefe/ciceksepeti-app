@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 import "./ProductGrid.scss";
 import { useSearchStore, useCategoryStore } from "../../../shared/store";
 import { PRODUCTS } from "../constants";
-import { yaprakIcon } from "../../../assets";
+import { yaprakIcon, yaprakIcon_2x } from "../../../assets";
 
 const ProductGrid: React.FC = () => {
   const { searchTerm, isSearchActive } = useSearchStore();
@@ -36,7 +36,12 @@ const ProductGrid: React.FC = () => {
   return (
     <div className="container product-grid-container">
       <h3 className="product-grid-title">
-        <img src={yaprakIcon} alt="Leaf" className="leaf-icon" />
+        <img
+          src={yaprakIcon}
+          srcSet={`${yaprakIcon} 1x, ${yaprakIcon_2x} 2x`}
+          alt="Leaf"
+          className="leaf-icon"
+        />
         {selectedCategoryName}
       </h3>
       <div className="product-grid">

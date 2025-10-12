@@ -50,6 +50,14 @@
 
 .h1-bar {
   background-image: url("../../../assets/bar.png");
+  background-image: -webkit-image-set(
+    url("../../../assets/bar.png") 1x,
+    url("../../../assets/bar@2x.png") 2x
+  );
+  background-image: image-set(
+    url("../../../assets/bar.png") 1x,
+    url("../../../assets/bar@2x.png") 2x
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

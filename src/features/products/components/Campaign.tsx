@@ -25,8 +25,9 @@ const CAMPAIGN_LIST = [
 function Campaign() {
   return (
     <div className="campaign-list container">
-      {CAMPAIGN_LIST.map((campaign) => (
+      {CAMPAIGN_LIST.map((campaign, index) => (
         <div
+          key={index}
           className="campaign-item"
           style={{ backgroundColor: campaign.bgColor }}
         >

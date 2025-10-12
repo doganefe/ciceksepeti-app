@@ -7,7 +7,8 @@ import googlePlay from "../../../assets/play-store.svg";
 import { MOBILE_APP_CONFIG } from "../constants";
 
 const MobileAppDownload: React.FC = () => {
-  const { title, subtitle, qrCodeImage, phoneImage } = MOBILE_APP_CONFIG;
+  const { title, subtitle, qrCodeImage, qrCodeImage2x, phoneImage } =
+    MOBILE_APP_CONFIG;
   return (
     <div className="mobile-app-download">
       <div className="download-content container">
@@ -23,7 +24,11 @@ const MobileAppDownload: React.FC = () => {
         <div className="download-content-child">
           <div className="qr-code-container">
             <div className="qr-code">
-              <img src={qrCodeImage} alt="QR Code" />
+              <img
+                src={qrCodeImage}
+                srcSet={`${qrCodeImage} 1x, ${qrCodeImage2x} 2x`}
+                alt="QR Code"
+              />
             </div>
             <div className="qr-code-description">
               <h2>{title}</h2>
