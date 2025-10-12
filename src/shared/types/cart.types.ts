@@ -1,4 +1,5 @@
-// Cart Types
+// generated-with-AI (revised)
+// Cart Types - shopping cart state management types
 export interface CartItem {
   id: string;
   name: string;

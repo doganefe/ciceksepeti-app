@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Self-contained component - imports config directly instead of receiving as props
 import React from "react";
 import "./MobileAppDownload.scss";
 import appStoreSvg from "../../../assets/app-store.svg";

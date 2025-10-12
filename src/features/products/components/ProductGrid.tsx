@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Self-contained component - manages its own data from stores and constants
 import React from "react";
 import ProductCard from "./ProductCard";
 import "./ProductGrid.scss";

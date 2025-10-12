@@ -100,31 +100,6 @@ Projeyi feature-based yapıya geçirmesini söyledim. Çünkü herhangi bir mima
 - **Tüm Kategoriler:** ID "1" seçildiğinde tüm ürünler gösterilir
 - **Temizleme:** Filtreler bağımsız veya birlikte temizlenebilir
 
----
-
-## Proje Durumu
-
-✅ **Tamamlanan Özellikler:**
-
-- Temel component yapısı
-- Feature-based mimari
-- Global state yönetimi (Zustand)
-- Sepet sistemi
-- Arama sistemi (3 karakter kuralı)
-- Kategori bazlı filtreleme
-- SVG icon entegrasyonu
-- Responsive tasarım
-- SCSS değişkenlerini merkezileştirme
-
-🔄 **Devam Eden:**
-
-- Proje geliştirme süreci
-
-📋 **Sonraki Adımlar:**
-
-- Test ve optimizasyon
-- Ek özellikler
-
 ## 6. SCSS Değişkenlerini Merkezileştirme
 
 **İstek:** SCSS değişkenlerini merkezi bir dosyada topla ve tüm component'lerde kullan.
@@ -143,4 +118,198 @@ Projeyi feature-based yapıya geçirmesini söyledim. Çünkü herhangi bir mima
 - Bakım kolaylığı
 - Ölçeklenebilirlik
 
-### 7.Stilleri Desktop firstten mobile first e geçirme
+## 7. Stilleri Desktop First'ten Mobile First'e Geçirme
+
+---
+
+## 8. Dinamik Kategori Adı Gösterimi
+
+**Prompt:** "instead of static 'Tüm Kategoriler', put selectedCategory item name"
+
+### AI'ın İlk Çözümü:
+
+ProductGrid'de CATEGORIES'den kategori adını lookup yapmak:
+
+```typescript
+const selectedCategory = useMemo(() => {
+  return (
+    CATEGORIES.find((cat) => cat.id === selectedCategoryId) || CATEGORIES[0]
+  );
+}, [selectedCategoryId]);
+```
+
+✅ **UYGULANSI** - Çalıştı ama optimize değil.
+
+### Kullanıcı Feedback:
+
+**Prompt:** "instead of getting category name, maybe add it to store when user selects category and then get from there"
+
+### AI'ın Geliştirilmiş Çözümü:
+
+Store'da `selectedCategoryName` tutmak daha verimli.
+
+✅ **UYGULANSI** - Store güncellendi:
+
+- `selectedCategoryName` state'i eklendi
+- `setSelectedCategory` artık hem ID hem name alıyor
+- Lookup gereksiz hale geldi
+
+### Bug Fix:
+
+**Prompt:** "once user deselects a category, category name still remains old name"
+
+AI sorunu tespit etti ve düzeltti:
+
+```typescript
+selectedCategoryName: newCategoryId === null
+  ? "Tüm Kategoriler"
+  : categoryName || "Tüm Kategoriler";
+```
+
+✅ **UYGULANSI** - Deselect durumunda kategori adı sıfırlanıyor.
+
+---
+
+## 9. Store'ları Ayırma - Category vs Search
+
+**Prompt:** "Do you think it is logical to put both category and searchTerm store to same store file"
+
+### AI'ın Analizi:
+
+AI, mevcut kullanımı analiz etti:
+
+- **Search store** sadece SearchBar tarafından kullanılıyor
+- **Category store** CategoryNavigation, CategoryDrawer, Header tarafından kullanılıyor
+- **Her ikisi birden** sadece ProductGrid tarafından kullanılıyor
+
+### AI'ın Önerisi:
+
+❌ **Aynı store'da kalmasın** - Farklı concerns, bağımsız kullanım
+
+**Önerilen Yapı:**
+
+- `useCategoryStore` - Navigation/filtering by category
+- `useSearchStore` - Text-based search
+
+### Uygulama:
+
+✅ **UYGULANSI** - Store'lar ayrıldı:
+
+**Yeni Dosyalar:**
+
+1. `src/shared/types/category.types.ts`
+2. `src/shared/store/category.store.ts`
+3. `src/shared/types/search.types.ts` (güncellendi - sadece search)
+4. `src/shared/store/search.store.ts` (güncellendi - sadece search)
+
+**Component Güncellemeleri:**
+
+- CategoryNavigation → `useCategoryStore`
+- CategoryDrawer → `useCategoryStore`
+- SearchBar → `useSearchStore`
+- ProductGrid → Her ikisini de kullanıyor
+
+### Faydalar:
+
+- Single Responsibility Principle
+- Better organization
+- Independent stores
+- Clear separation of concerns
+
+---
+
+## 10. BreadcrumbBar'ı Self-Contained Yapma
+
+**Prompt:** "fix breadcrumb to show selectedCategory"
+
+### AI'ın İlk Çözümü:
+
+App.tsx'te breadcrumb items oluşturmak:
+
+```typescript
+const { selectedCategoryName } = useCategoryStore();
+const breadcrumbItems = [
+  { label: "Çiçeksepeti.com", href: "/" },
+  { label: selectedCategoryName },
+];
+```
+
+✅ **UYGULANSI**
+
+### Kullanıcı Feedback:
+
+**Prompt:** "breadcrumb bar can get categorystore from itself"
+
+### AI'ın Geliştirilmiş Çözümü:
+
+BreadcrumbBar component'ini self-contained yapmak.
+
+✅ **UYGULANSI**:
+
+- BreadcrumbBar artık prop almıyor
+- Kendi içinde `useCategoryStore` kullanıyor
+- Breadcrumb items'ı kendisi oluşturuyor
+- App.tsx'ten store import'u kaldırıldı
+
+### Faydalar:
+
+- Better encapsulation
+- Simpler usage
+- No prop drilling
+- Self-contained component
+
+---
+
+## 11. App.tsx'i Tamamen Refactor Etme
+
+**Prompt:** "do the rest for app.tsx."
+
+### AI'ın Anlayışı:
+
+Kullanıcı, tüm component'lerin self-contained olmasını istiyor.
+
+### Yapılan Büyük Refactoring:
+
+#### 1. **CategoryNavigation**
+
+- ❌ **Önce:** `categories` prop alıyordu
+- ✅ **Sonra:** `CATEGORIES`'i kendi içinde import ediyor
+
+#### 2. **ProductGrid**
+
+- ❌ **Önce:** `products` prop alıyordu
+- ✅ **Sonra:** `PRODUCTS`'ı kendi içinde import ediyor
+- TypeScript readonly array sorunu çözüldü
+
+#### 3. **MobileAppDownload**
+
+- ❌ **Önce:** Spread props alıyordu `{...MOBILE_APP_CONFIG}`
+- ✅ **Sonra:** `MOBILE_APP_CONFIG`'i kendi içinde import ediyor
+
+#### 4. **App.tsx - Final Clean State**
+
+```typescript
+// ÖNCE: 31 satır, karmaşık prop passing
+import { CATEGORIES, PRODUCTS, MOBILE_APP_CONFIG } from "./shared/constants";
+
+<CategoryNavigation categories={[...CATEGORIES]} />
+<ProductGrid products={[...PRODUCTS]} />
+<MobileAppDownload {...MOBILE_APP_CONFIG} />
+
+// SONRA: 30 satır, sade ve deklaratif
+import Campaign from "./features/products/components/Campaign";
+
+<CategoryNavigation />
+<ProductGrid />
+<MobileAppDownload />
+```
+
+### Elde Edilen Mimari:
+
+✅ **Single Responsibility** - App.tsx sadece layout
+✅ **Self-Contained Components** - Her component kendi datasını yönetiyor
+✅ **No Prop Drilling** - Direct access to stores/constants
+✅ **Better Testability** - Components bağımsız test edilebilir
+✅ **Cleaner Code** - App.tsx artık saf bir UI tree
+
+---

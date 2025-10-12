@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Category store - separated from search store for better separation of concerns
 import { create } from "zustand";
 import type { CategoryState } from "../types/category.types";
 

@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Zustand store for shopping cart management with localStorage persistence
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { CartState, CartItem } from "../types/cart.types";
@@ -85,4 +87,3 @@ export const useCartStore = create<CartState>()(
     }
   )
 );
-

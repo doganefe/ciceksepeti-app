@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Self-contained component - imports CATEGORIES directly instead of receiving as props
 import React from "react";
 import "./CategoryNavigation.scss";
 import { useCategoryStore } from "../../../shared/store";

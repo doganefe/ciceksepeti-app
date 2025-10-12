@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Self-contained component - gets category name directly from store
 import React from "react";
 import "./BreadcrumbBar.scss";
 import { useCategoryStore } from "../../../shared/store";

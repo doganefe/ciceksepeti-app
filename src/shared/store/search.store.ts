@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Search store - handles text-based search functionality (3+ character rule)
 import { create } from "zustand";
 import type { SearchState } from "../types/search.types";
 

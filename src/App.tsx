@@ -1,3 +1,5 @@
+// generated-with-AI (revised)
+// Clean App.tsx - all components are self-contained, no prop drilling
 import "./App.css";
 import { Header, BreadcrumbBar } from "./features/header";
 import { CategoryNavigation } from "./features/navigation";
