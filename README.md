@@ -2,6 +2,8 @@
 
 A demo e-commerce application built with React, TypeScript, and Vite.
 
+🔗 **Live Demo:** [https://ciceksepeti-case.netlify.app/](https://ciceksepeti-case.netlify.app/)
+
 ## Features
 
 - Product catalog with grid view
