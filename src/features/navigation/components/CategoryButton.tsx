@@ -5,7 +5,7 @@ import type { Category } from "../types/category-navigation.types";
 interface CategoryButtonProps {
   category: Category;
   isActive: boolean;
-  onClick: (categoryId: string) => void;
+  onClick: (categoryId: string, categoryName: string) => void;
 }
 
 const CategoryButton: React.FC<CategoryButtonProps> = ({
@@ -14,7 +14,7 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({
   onClick,
 }) => {
   const handleClick = () => {
-    onClick(category.id);
+    onClick(category.id, category.name);
   };
 
   return (

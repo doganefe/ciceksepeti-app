@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategoryNavigation.scss";
-import { useSearchStore } from "../../../shared/store";
+import { useCategoryStore } from "../../../shared/store";
 import CategoryButton from "./CategoryButton";
 import type { CategoryNavigationProps } from "../types/category-navigation.types";
 import { categoryIcon } from "../../../assets";
@@ -8,10 +8,10 @@ import { categoryIcon } from "../../../assets";
 const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
   categories,
 }) => {
-  const { selectedCategoryId, setSelectedCategory } = useSearchStore();
+  const { selectedCategoryId, setSelectedCategory } = useCategoryStore();
 
-  const handleCategoryClick = (categoryId: string) => {
-    setSelectedCategory(categoryId);
+  const handleCategoryClick = (categoryId: string, categoryName: string) => {
+    setSelectedCategory(categoryId, categoryName);
   };
 
   return (

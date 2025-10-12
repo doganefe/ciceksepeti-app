@@ -1,4 +1,4 @@
-// Shared Components, Hooks, Utils, Types, Constants and Store
+// Shared Components, Hooks, Utils, Types, Constants and Stores
 export * from "./components";
 export * from "./hooks";
 export * from "./utils";

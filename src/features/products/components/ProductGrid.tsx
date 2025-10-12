@@ -1,17 +1,14 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import "./ProductGrid.scss";
-import { useSearchStore } from "../../../shared/store";
+import { useSearchStore, useCategoryStore } from "../../../shared/store";
 import type { ProductGridProps } from "../types/product-grid.types";
 import { yaprakIcon } from "../../../assets";
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
-  const {
-    searchTerm,
-    isSearchActive,
-    selectedCategoryId,
-    isCategoryFilterActive,
-  } = useSearchStore();
+  const { searchTerm, isSearchActive } = useSearchStore();
+  const { selectedCategoryId, selectedCategoryName, isCategoryFilterActive } =
+    useCategoryStore();
 
   // Arama terimi ve kategori filtrelemesine göre ürünleri filtrele
   const filteredProducts = React.useMemo(() => {
@@ -44,7 +41,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
     <div className="container product-grid-container">
       <h3 className="product-grid-title">
         <img src={yaprakIcon} alt="Leaf" className="leaf-icon" />
-        Tüm Kategoriler
+        {selectedCategoryName}
       </h3>
       <div className="product-grid">
         {filteredProducts.length > 0 ? (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategoryDrawer.scss";
-import { useSearchStore } from "../../../shared/store";
+import { useCategoryStore } from "../../../shared/store";
 import { CATEGORIES } from "../../../shared/constants";
 
 interface CategoryDrawerProps {
@@ -9,10 +9,10 @@ interface CategoryDrawerProps {
 }
 
 const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ isOpen, onClose }) => {
-  const { selectedCategoryId, setSelectedCategory } = useSearchStore();
+  const { selectedCategoryId, setSelectedCategory } = useCategoryStore();
 
-  const handleCategoryClick = (categoryId: string) => {
-    setSelectedCategory(categoryId);
+  const handleCategoryClick = (categoryId: string, categoryName: string) => {
+    setSelectedCategory(categoryId, categoryName);
     onClose();
   };
 
@@ -34,7 +34,7 @@ const CategoryDrawer: React.FC<CategoryDrawerProps> = ({ isOpen, onClose }) => {
               className={`category-item ${
                 selectedCategoryId === category.id ? "active" : ""
               }`}
-              onClick={() => handleCategoryClick(category.id)}
+              onClick={() => handleCategoryClick(category.id, category.name)}
             >
               <span className="category-name">{category.name}</span>
               {category.count && (
