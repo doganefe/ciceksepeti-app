@@ -2,14 +2,10 @@ import React from "react";
 import "./MobileAppDownload.scss";
 import appStoreSvg from "../../../assets/app-store.svg";
 import googlePlay from "../../../assets/play-store.svg";
-import type { MobileAppDownloadProps } from "../types/mobile-app-download.types";
+import { MOBILE_APP_CONFIG } from "../../../shared/constants";
 
-const MobileAppDownload: React.FC<MobileAppDownloadProps> = ({
-  title,
-  subtitle,
-  qrCodeImage,
-  phoneImage,
-}) => {
+const MobileAppDownload: React.FC = () => {
+  const { title, subtitle, qrCodeImage, phoneImage } = MOBILE_APP_CONFIG;
   return (
     <div className="mobile-app-download">
       <div className="download-content container">

@@ -1,13 +1,11 @@
 import React from "react";
 import "./CategoryNavigation.scss";
 import { useCategoryStore } from "../../../shared/store";
+import { CATEGORIES } from "../../../shared/constants";
 import CategoryButton from "./CategoryButton";
-import type { CategoryNavigationProps } from "../types/category-navigation.types";
 import { categoryIcon } from "../../../assets";
 
-const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
-  categories,
-}) => {
+const CategoryNavigation: React.FC = () => {
   const { selectedCategoryId, setSelectedCategory } = useCategoryStore();
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
@@ -24,7 +22,7 @@ const CategoryNavigation: React.FC<CategoryNavigationProps> = ({
       </div>
 
       <div className="category-tabs">
-        {categories.map((category) => (
+        {CATEGORIES.map((category) => (
           <CategoryButton
             key={category.id}
             category={category}

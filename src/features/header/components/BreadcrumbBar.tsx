@@ -1,16 +1,20 @@
 import React from "react";
 import "./BreadcrumbBar.scss";
+import { useCategoryStore } from "../../../shared/store";
 
 interface BreadcrumbItem {
   label: string;
   href?: string;
 }
 
-interface BreadcrumbBarProps {
-  items: BreadcrumbItem[];
-}
+const BreadcrumbBar: React.FC = () => {
+  const { selectedCategoryName } = useCategoryStore();
 
-const BreadcrumbBar: React.FC<BreadcrumbBarProps> = ({ items }) => {
+  const items: BreadcrumbItem[] = [
+    { label: "Çiçeksepeti.com", href: "/" },
+    { label: selectedCategoryName },
+  ];
+
   return (
     <nav className="breadcrumb-bar container">
       {items.map((item, index) => (
