@@ -5,8 +5,7 @@
 
 // Search Bar Styles
 .search-bar {
-  display: flex;
-  align-items: center;
+  @include flex-start;
   background-color: $light-gray;
   border: 1px solid $border-color;
   border-radius: $border-radius-large;

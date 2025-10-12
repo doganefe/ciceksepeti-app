@@ -54,8 +54,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 50px;
-  display: flex;
-  align-items: center;
+  @include flex-start;
   position: relative;
 }
 
