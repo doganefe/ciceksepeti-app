@@ -4,7 +4,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import "./ProductGrid.scss";
 import { useSearchStore, useCategoryStore } from "../../../shared/store";
-import { PRODUCTS } from "../../../shared/constants";
+import { PRODUCTS } from "../constants";
 import { yaprakIcon } from "../../../assets";
 
 const ProductGrid: React.FC = () => {

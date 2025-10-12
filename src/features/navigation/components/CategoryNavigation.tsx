@@ -3,7 +3,7 @@
 import React from "react";
 import "./CategoryNavigation.scss";
 import { useCategoryStore } from "../../../shared/store";
-import { CATEGORIES } from "../../../shared/constants";
+import { CATEGORIES } from "../constants";
 import CategoryButton from "./CategoryButton";
 import { categoryIcon } from "../../../assets";
 

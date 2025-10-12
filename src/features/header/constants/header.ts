@@ -1,4 +1,4 @@
-import cicekSepetiLogo from "../../assets/ciceksepeti-ikon.svg";
+import cicekSepetiLogo from "../../../assets/ciceksepeti-ikon.svg";
 
 // Header Constants
 export const HEADER_CONFIG = {

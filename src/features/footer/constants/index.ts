@@ -1,0 +1,1 @@
+export { FOOTER_SECTIONS, FOOTER_SOCIAL_MEDIA, FOOTER_TEXTS } from "./footer";

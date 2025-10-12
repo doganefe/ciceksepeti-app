@@ -19,7 +19,7 @@ import {
   product9_2x,
   product10,
   product10_2x,
-} from "../../assets";
+} from "../../../assets";
 
 // Products Constants
 export const PRODUCTS = [

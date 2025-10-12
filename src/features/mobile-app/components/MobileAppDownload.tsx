@@ -4,7 +4,7 @@ import React from "react";
 import "./MobileAppDownload.scss";
 import appStoreSvg from "../../../assets/app-store.svg";
 import googlePlay from "../../../assets/play-store.svg";
-import { MOBILE_APP_CONFIG } from "../../../shared/constants";
+import { MOBILE_APP_CONFIG } from "../constants";
 
 const MobileAppDownload: React.FC = () => {
   const { title, subtitle, qrCodeImage, phoneImage } = MOBILE_APP_CONFIG;

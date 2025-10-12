@@ -4,8 +4,8 @@ import {
   FOOTER_SECTIONS,
   FOOTER_SOCIAL_MEDIA,
   FOOTER_TEXTS,
-  HEADER_CONFIG,
-} from "../../../shared/constants";
+} from "../constants";
+import { HEADER_CONFIG } from "../../header/constants";
 import {
   fbIcon,
   xIcon,

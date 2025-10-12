@@ -1,7 +1,7 @@
 import React from "react";
 import "./CategoryDrawer.scss";
 import { useCategoryStore } from "../../../shared/store";
-import { CATEGORIES } from "../../../shared/constants";
+import { CATEGORIES } from "../../navigation/constants";
 
 interface CategoryDrawerProps {
   isOpen: boolean;

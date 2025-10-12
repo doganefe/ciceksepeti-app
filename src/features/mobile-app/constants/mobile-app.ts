@@ -1,4 +1,4 @@
-import { qrCode, doublePhone } from "../../assets";
+import { qrCode, doublePhone } from "../../../assets";
 
 // Mobile App Constants
 export const MOBILE_APP_CONFIG = {
