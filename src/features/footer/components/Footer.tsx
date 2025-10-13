@@ -62,7 +62,10 @@ const Footer: React.FC = () => {
           <div className="privacy-text">
             <p>
               {privacyText}
-              <a href={privacyLink}>buradan</a>
+              <a className="privacy-text-link" href={privacyLink}>
+                buradan
+              </a>
+              ulaşabilirsiniz.
             </p>
           </div>
         </div>
